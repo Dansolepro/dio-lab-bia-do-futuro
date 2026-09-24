@@ -1,0 +1,35 @@
+{
+  "instituicao": "Centro de Atenção Psicossocial (CAPS)",
+  "regimes_atendimento": {
+    "intensivo": "Atendimento diário. Indicado para pacientes em situação de crise grave, sofrimento intenso ou alta vulnerabilidade.",
+    "semi_intensivo": "Atendimento de até 12 dias no mês. Indicado para pacientes em processo de estabilização, que necessitam de suporte frequente, mas mantêm alguma autonomia.",
+    "nao_intensivo": "Atendimento esporádico ou mensal. Indicado para pacientes estáveis, em processo de reabilitação e acompanhamento longitudinal."
+  },
+  "oficinas_disponiveis": [
+    {
+      "nome": "Arteterapia e Expressão Visual",
+      "foco": "Estímulo à criatividade, organização do pensamento e expressão de sentimentos não-verbais."
+    },
+    {
+      "nome": "Cineclube e Debate",
+      "foco": "Socialização, reinserção social e estímulo à capacidade crítica e reflexiva."
+    },
+    {
+      "nome": "Horta e Jardinagem",
+      "foco": "Terapia ocupacional, senso de responsabilidade, contato com a natureza e rotina."
+    },
+    {
+      "nome": "Geração de Renda e Artesanato",
+      "foco": "Autonomia financeira, reabilitação psicossocial e desenvolvimento de habilidades manuais."
+    },
+    {
+      "nome": "Grupo de Caminhada e Atividade Física Leve",
+      "foco": "Cuidados com a saúde física, redução da ansiedade e regulação do sono."
+    }
+  ],
+  "regras_seguranca_pts": [
+    "O agente NUNCA deve alterar ou prescrever dosagens de medicamentos.",
+    "Sinais de alerta como ideação suicida ou agressividade devem colocar o plano em Regime Intensivo imediatamente.",
+    "Todo PTS gerado é uma minuta e necessita de validação da equipe multiprofissional."
+  ]
+}
