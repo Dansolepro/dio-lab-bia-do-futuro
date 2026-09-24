@@ -6,10 +6,9 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 
 | Arquivo | Formato | Utilização no Agente |
 |---------|---------|---------------------|
-| `historico_atendimento.csv` | CSV | Contextualizar interações anteriores |
-| `perfil_investidor.json` | JSON | Personalizar recomendações |
-| `produtos_financeiros.json` | JSON | Sugerir produtos adequados ao perfil |
-| `transacoes.csv` | CSV | Analisar padrão de gastos do cliente |
+| `historico_consultas.csv` | CSV | Registro histórico de presenças, faltas, crises e evoluções anteriores do paciente no Caps para análise de adesão ao tratamento. |
+| `diretrizes_caps_pts.json` | JSON | Base de conhecimento fixa contendo o catálogo de oficinas terapêuticas, critérios de frequência (intensivo, semi-intensivo, não-intensivo) e protocolos de acolhimento baseados no Ministério da Saúde. |
+| `documento_paciente.[pdf/txt]` | PDF / TXT | Arquivo anexado dinamicamente pelo profissional (anamnese, laudo ou relatório de transferência) contendo a situação atual do paciente. |
 
 > [!TIP]
 > **Quer um dataset mais robusto?** Você pode utilizar datasets públicos do [Hugging Face](https://huggingface.co/datasets) relacionados a finanças, desde que sejam adequados ao contexto do desafio.
@@ -20,7 +19,7 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 
 > Você modificou ou expandiu os dados mockados? Descreva aqui.
 
-[Sua descrição aqui]
+Os dados foram totalmente reestruturados para o contexto de Saúde Mental Pública (SUS). Em vez de produtos financeiros e investimentos, o dataset simula dados clínicos reais de um Caps. Todos os arquivos de dados dos pacientes foram criados utilizando técnicas de anonimização estrita (substituindo nomes reais por IDs, mascarando CPFs e alterando endereços por bairros genéricos) para garantir conformidade com a LGPD e o sigilo médico.
 
 ---
 
@@ -29,12 +28,14 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 ### Como os dados são carregados?
 > Descreva como seu agente acessa a base de conhecimento.
 
-[ex: Os JSON/CSV são carregados no início da sessão e incluídos no contexto do prompt]
+- Dados Fixos (diretrizes_caps_pts.json): São carregados na inicialização do servidor em memória RAM pelo Python e injetados como contexto base do agente.
+- Dados Históricos (historico_consultas.csv): O sistema faz uma busca filtrando pelo ID mascarado do paciente assim que o profissional inicia o atendimento.
+- Arquivo Anexado (documento_paciente.pdf): É processado dinamicamente via biblioteca Python (como PyPDF2 ou similar). O texto extraído é limpo de metadados e enviado diretamente na sessão do chat junto com a requisição da API da LLM.
 
 ### Como os dados são usados no prompt?
 > Os dados vão no system prompt? São consultados dinamicamente?
 
-[Sua descrição aqui]
+As diretrizes institucionais do Caps vão estruturadas dentro do System Prompt para garantir que a IA nunca sugira tratamentos fora da realidade do SUS. Já os dados específicos do paciente (histórico + arquivo anexado) são injetados dinamicamente no Contexto da Mensagem (User Prompt). O prompt força a LLM a cruzar o relatório do arquivo com as regras do JSON para gerar a minuta final do PTS.
 
 ---
 
@@ -43,13 +44,19 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 > Mostre um exemplo de como os dados são formatados para o agente.
 
 ```
-Dados do Cliente:
-- Nome: João Silva
-- Perfil: Moderado
-- Saldo disponível: R$ 5.000
+[DIRETRIZES DA INSTITUIÇÃO (Origem: diretrizes_caps_pts.json)]
+Oficinas Disponíveis: Arteterapia, Cineclube, Horta e Jardinagem, Geração de Renda.
+Regimes de Caps: 
+- Intensivo (atendimento diário)
+- Semi-intensivo (até 12 dias no mês)
+- Não-intensivo (atendimentos mensais/esporádicos)
 
-Últimas transações:
-- 01/11: Supermercado - R$ 450
-- 03/11: Streaming - R$ 55
-...
+[HISTÓRICO DO PACIENTE (Origem: historico_consultas.csv)]
+- Paciente ID: #CAPS-9872
+- Data de Admissão: 14/03/2025
+- Frequência Recente: Faltou às duas últimas consultas com a psicologia. Relato de isolamento social.
+
+[DADOS DO ARQUIVO ANEXADO (Origem: documento_paciente.pdf - Relatório Psiquiátrico de 24/09/2026)]
+"Paciente apresenta quadro de depressão maior com sintomas ansiosos graves. Relata insônia terminal e anedonia. Conduta Médica: Ajuste de Sertralina para 100mg/dia. Encaminho para intensificação de cuidados e inclusão em atividades comunitárias/oficinas."
+
 ```
