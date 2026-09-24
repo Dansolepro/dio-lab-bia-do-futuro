@@ -1,0 +1,5 @@
+id_paciente,data_atendimento,profissional,tipo_atendimento,evolucao_resumida,presenca
+CAPS-9872,10/08/2026,Dra. Juliana (Psiquiatra),Consulta Médica,Início de tratamento com Sertralina 50mg. Paciente relata isolamento social leve.,Compareceu
+CAPS-9872,24/08/2026,Lucas (Psicólogo),Psicoterapia Individual,Paciente expressou choro fácil e dificuldades em manter rotina de sono.,Compareceu
+CAPS-9872,07/09/2026,Lucas (Psicólogo),Psicoterapia Individual,Falta injustificada. Familiar informou por telefone que o paciente não quis sair da cama.,Faltou
+CAPS-9872,21/09/2026,Lucas (Psicólogo),Psicoterapia Individual,Segunda falta consecutiva. Relato de agravamento do isolamento e recusa alimentar.,Faltou
