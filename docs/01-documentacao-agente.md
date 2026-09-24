@@ -60,8 +60,8 @@ flowchart TD
 |------------|-----------|
 | Interface | Tela em Streamlit com campo de upload para arquivos (.pdf, .txt, .docx) e chat para ajustes. |
 | LLM | Ollama (Local) |
-| Base de Conhecimento | [ex: JSON/CSV com dados do cliente] |
-| Validação | [ex: Checagem de alucinações] |
+| Base de Conhecimento |  ConhecimentoArquivos de referência com as diretrizes do Ministério da Saúde para o Caps (tipos de oficinas, regras do PTS) para guiar as sugestões do agente. |
+| Validação | Camada de código que impede a IA de sugerir dosagens de medicamentos e emite um aviso obrigatório de revisão humana. |
 
 ---
 
