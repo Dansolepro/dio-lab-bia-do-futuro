@@ -89,3 +89,15 @@ Uma aba será aberta automaticamente no seu navegador de internet padrão (geral
 1. **Anexe o arquivo do paciente:** Na barra lateral esquerda (*Sidebar*), clique em carregar arquivo e envie um relatório clínico do paciente no formato **.txt** ou **.pdf**.
 2. **Faça uma solicitação completa (PTS):** Na caixa de chat inferior, envie um comando amplo como: *"Gere a minuta do PTS com base no arquivo fornecido"*. O agente lerá o arquivo, cruzará com as diretrizes do Caps e devolverá o plano completo estruturado em **5 etapas obrigatórias** (Aviso de segurança, Síntese do caso, Regime recomendado, Oficinas indicadas, Medicação centralizada e Lacunas identificadas).
 3. **Faça perguntas pontuais:** Caso queira apenas uma busca rápida, pergunte algo direto como: *"Quantas faltas este paciente teve no histórico?"*. O agente identificará sua intenção e responderá em poucos parágrafos sem a rigidez da estrutura de 5 etapas.
+
+## Evidências de Execução
+
+<img width="1171" height="919" alt="Captura de tela 2026-09-26 152221" src="https://github.com/user-attachments/assets/50abc544-66cc-494b-8d54-fb1780b90570" />
+<img width="1155" height="895" alt="Captura de tela 2026-09-26 152239" src="https://github.com/user-attachments/assets/5640c39e-3056-419c-8ff0-5c5144899124" />
+<img width="1112" height="902" alt="Captura de tela 2026-09-26 152244" src="https://github.com/user-attachments/assets/dcb2ce23-8291-444c-9a6e-14ceea012767" />
+<img width="1147" height="888" alt="Captura de tela 2026-09-26 152251" src="https://github.com/user-attachments/assets/a98f6f43-3a97-4bba-996f-25bb2fccb221" />
+<img width="1049" height="890" alt="Captura de tela 2026-09-26 152255" src="https://github.com/user-attachments/assets/773a3c64-d9fc-4229-a711-dd56a0d133ad" />
+<img width="1115" height="872" alt="Captura de tela 2026-09-26 152259" src="https://github.com/user-attachments/assets/67fc8d16-3341-4e1e-a616-99ff22ca70b5" />
+
+
+
