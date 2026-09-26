@@ -28,9 +28,16 @@ Os dados foram totalmente reestruturados para o contexto de Saúde Mental Públi
 ### Como os dados são carregados?
 > Descreva como seu agente acessa a base de conhecimento.
 
-- Dados Fixos (diretrizes_caps_pts.json): São carregados na inicialização do servidor em memória RAM pelo Python e injetados como contexto base do agente.
-- Dados Históricos (historico_consultas.csv): O sistema faz uma busca filtrando pelo ID mascarado do paciente assim que o profissional inicia o atendimento.
-- Arquivo Anexado (documento_paciente.pdf): É processado dinamicamente via biblioteca Python (como PyPDF2 ou similar). O texto extraído é limpo de metadados e enviado diretamente na sessão do chat junto com a requisição da API da LLM.
+# 1. Carrega as diretrizes institucionais do CAPS (Catálogo de oficinas e regras)
+with open('./data/diretrizes_caps_pts.json', 'r', encoding='utf-8') as f:
+    diretrizes_caps = json.load(f)
+
+# 2. Carrega o documento atual anexado do paciente (Texto Puro)
+with open('./data/documento_paciente_exemplo.txt', 'r', encoding='utf-8') as f:
+    documento_paciente = f.read()
+
+# 3. Carrega o histórico de evolução de consultas anteriores (Tabela)
+historico = pd.read_csv('./data/historico_consultas.csv', encoding='utf-8')
 
 ### Como os dados são usados no prompt?
 > Os dados vão no system prompt? São consultados dinamicamente?
