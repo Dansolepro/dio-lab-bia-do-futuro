@@ -8,12 +8,12 @@
 ### 1. O Problema (30 seg)
 > Qual dor do cliente você resolve?
 
-"No dia a dia dos Centros de Atenção Psicossocial, o CAPS, as equipes multiprofissionais enfrentam um grande gargalo: o excesso de burocracia e a fragmentação de dados. São laudos em PDF, evoluções em papel e planilhas de histórico espalhadas. Sintetizar tudo isso manualmente para criar ou atualizar o **Projeto Terapêutico Singular (PTS)** — que é o plano de tratamento do paciente — consome horas preciosas de médicos e psicólogos. Horas essas que deveriam estar sendo gastas com atendimento clínico direto a quem mais precisa."
+"No dia a dia dos Centros de Atenção Psicossocial, o CAPS, as equipes multiprofissionais enfrentam um grande gargalo: o excesso de burocracia e a fragmentação de dados. Eu estou passando por um tratamento de depressão e notei que, a maioria das informações do pasciente são anexadas em papel e planilhas de histórico em gavetas. Sintetizar tudo isso manualmente para criar ou atualizar o **Projeto Terapêutico Singular (PTS)**, que é o plano de tratamento do paciente, consome horas preciosas de médicos e psicólogos. Horas essas que deveriam estar sendo gastas com atendimento clínico direto a quem mais precisa. Ja faz uma semana que estou fiz minha consulta inicial e ainda não fizeram meu PTS."
 
 ### 2. A Solução (1 min)
 > Como seu agente resolve esse problema?
 
-"Para resolver essa dor, criamos o **Assistente Clínico CAPS**, um agente de Inteligência Artificial que atua como um co-piloto para as equipes de saúde mental. O profissional simplesmente anexa o último relatório do paciente em formato PDF ou TXT. O agente extrai as informações dinamicamente, cruza esses dados com o histórico de consultas do paciente e com as diretrizes e oficinas reais oferecidas pela instituição. A partir daí, ele gera uma minuta estruturada de PTS em segundos, dividida em diagnóstico sintetizado, regime de atendimento ideal, oficinas sugeridas e travas automáticas que apenas replicam a conduta do médico, sem nunca inventar remédios ou dosagens."
+"Para resolver essa dor, criei o **Assistente Clínico CAPS**, um agente de Inteligência Artificial que atua como um co-piloto para as equipes de saúde mental. O profissional simplesmente anexa o último relatório do paciente em formato TXT. O agente extrai as informações dinamicamente, cruza esses dados com o histórico de consultas do paciente e com as diretrizes e oficinas reais oferecidas pela instituição. A partir daí, ele gera uma minuta estruturada de PTS em segundos, dividida em diagnóstico sintetizado, regime de atendimento ideal, oficinas sugeridas e travas automáticas que apenas replicam a conduta do médico, sem nunca inventar remédios ou dosagens."
 
 ### 3. Demonstração (1 min)
 > Mostre o agente funcionando (pode ser gravação de tela)
