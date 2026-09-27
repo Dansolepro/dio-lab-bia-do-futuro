@@ -41,4 +41,4 @@
 
 > Cole aqui o link do seu pitch (YouTube, Loom, Google Drive, etc.)
 
-[Insira aqui o link após gravar sua apresentação]
+[(https://drive.google.com/file/d/1ldOryGCSQ16WjZ0-GipegFW0vuFmG1E2/view?usp=sharing)]
